@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartLila — Lista de Espera</title>
+<meta name="description" content="Coleira inteligente para quem trata pet como família. Monitoramento preventivo de saúde canina em tempo real. Entre na lista e seja o primeiro a saber.">
+<meta property="og:title" content="SmartLila — Sinta o coração dele, onde você estiver." />
+<meta property="og:description" content="Coleira inteligente para monitoramento preventivo de saúde canina. Para quem trata pet como família." />
+<meta property="og:image" content="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" />
+<meta property="og:url" content="https://smartlila.com.br" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: #0F0520; color: white; min-height: 100vh; overflow-x: hidden; }
+  .bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+  @keyframes heartbeat { 0%{transform:scale(1);opacity:0.30} 8%{transform:scale(1.10);opacity:0.46} 16%{transform:scale(0.96);opacity:0.26} 26%{transform:scale(1.16);opacity:0.52} 38%{transform:scale(1);opacity:0.30} 100%{transform:scale(1);opacity:0.30} }
+  @keyframes heartbeat2 { 0%{transform:scale(1);opacity:0.16} 10%{transform:scale(1.12);opacity:0.30} 18%{transform:scale(0.94);opacity:0.12} 28%{transform:scale(1.18);opacity:0.36} 42%{transform:scale(1);opacity:0.16} 100%{transform:scale(1);opacity:0.16} }
+  @keyframes heartbeat3 { 0%{transform:translate(-50%,-50%) scale(1);opacity:0.10} 12%{transform:translate(-50%,-50%) scale(1.14);opacity:0.22} 22%{transform:translate(-50%,-50%) scale(0.95);opacity:0.08} 32%{transform:translate(-50%,-50%) scale(1.20);opacity:0.28} 46%{transform:translate(-50%,-50%) scale(1);opacity:0.10} 100%{transform:translate(-50%,-50%) scale(1);opacity:0.10} }
+  @keyframes icon-beat { 0%{transform:scale(1)} 8%{transform:scale(1.18)} 16%{transform:scale(0.96)} 26%{transform:scale(1.24)} 40%{transform:scale(1)} 100%{transform:scale(1)} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  .bg-orb { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .bg-orb-1 { width:640px;height:640px;background:radial-gradient(circle,#7C3AED,transparent 70%);top:-200px;right:-140px;animation:heartbeat 1.65s ease-in-out infinite; }
+  .bg-orb-2 { width:430px;height:430px;background:radial-gradient(circle,#3B7FD4,transparent 70%);bottom:-90px;left:-90px;animation:heartbeat2 1.65s ease-in-out infinite 0.08s; }
+  .bg-orb-3 { width:330px;height:330px;background:radial-gradient(circle,#BDB0D8,transparent 70%);top:50%;left:50%;animation:heartbeat3 1.65s ease-in-out infinite 0.16s; }
+  .page { position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem; }
+  .wrap { width:100%;max-width:560px;display:flex;flex-direction:column;align-items:center;gap:1.75rem;text-align:center;animation:fadeUp 0.8s ease forwards; }
+  .logo-ring { width:88px;height:88px;border-radius:50%;border:1px solid rgba(189,176,216,0.18);display:flex;align-items:center;justify-content:center;position:relative;animation:icon-beat 1.65s ease-in-out infinite; }
+  .logo-ring::before { content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(189,176,216,0.07); }
+  .logo-ring img { width:72px;height:72px;object-fit:contain; }
+  .eyebrow { font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:#BDB0D8;opacity:0.6; }
+  .headline { font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;line-height:1.08;color:white; }
+  .headline em { font-style:italic;color:#BDB0D8; }
+  .subhead { font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.40);line-height:1.75;max-width:440px; }
+  .benefits { width:100%;display:flex;flex-direction:column;gap:0.65rem; }
+  .benefit { display:flex;align-items:center;gap:1rem;background:rgba(189,176,216,0.06);border:1px solid rgba(189,176,216,0.14);border-radius:12px;padding:0.85rem 1.25rem;text-align:left; }
+  .benefit-icon { width:34px;height:34px;border-radius:50%;background:rgba(189,176,216,0.12);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;animation:icon-beat 1.65s ease-in-out infinite; }
+  .benefit-text { font-size:0.875rem;font-weight:500;color:rgba(255,255,255,0.85); }
+  .form { width:100%;display:flex;flex-direction:column;gap:0.65rem; }
+  .input-row { display:grid;grid-template-columns:1fr 1fr;gap:0.65rem; }
+  .input-group { display:flex;flex-direction:column;gap:0.4rem;text-align:left; }
+  label.input-label { font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(189,176,216,0.55);cursor:pointer; }
+  input[type="text"], input[type="email"] { width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(189,176,216,0.18);border-radius:12px;padding:0.9rem 1.2rem;font-family:'DM Sans',sans-serif;font-size:0.9rem;color:white;outline:none;transition:border-color 0.2s,background 0.2s; }
+  input::placeholder { color:rgba(255,255,255,0.20); }
+  input:focus { border-color:rgba(189,176,216,0.45);background:rgba(255,255,255,0.07); }
+  .lgpd { display:flex;align-items:flex-start;gap:0.75rem;text-align:left;padding:0.75rem 1rem;background:rgba(189,176,216,0.04);border:1px solid rgba(189,176,216,0.12);border-radius:10px; }
+  .lgpd input[type="checkbox"] { width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:#BDB0D8;cursor:pointer;padding:0;border-radius:4px; }
+  .lgpd-text { font-size:0.75rem;color:rgba(255,255,255,0.35);line-height:1.6; }
+  .lgpd-text a { color:rgba(189,176,216,0.6);text-decoration:underline; }
+  .btn { width:100%;background:#BDB0D8;color:#0F0520;border:none;border-radius:12px;padding:1rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;cursor:pointer;transition:all 0.2s; }
+  .btn:hover:not(:disabled) { background:#cec2e8;transform:translateY(-1px);box-shadow:0 8px 28px rgba(189,176,216,0.25); }
+  .btn:active:not(:disabled) { transform:translateY(0); }
+  .btn:disabled { opacity:0.6;cursor:not-allowed; }
+  .form-note { font-size:0.68rem;color:rgba(255,255,255,0.15);text-align:center; }
+  .success { display:none;flex-direction:column;align-items:center;gap:0.9rem;padding:2rem;background:rgba(189,176,216,0.05);border:1px solid rgba(189,176,216,0.14);border-radius:16px;width:100%; }
+  .success.show { display:flex;animation:fadeUp 0.5s ease forwards; }
+  .success-icon { font-size:2rem;animation:icon-beat 1.65s ease-in-out infinite; }
+  .success-title { font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:#BDB0D8;text-align:center; }
+  .success-text { font-size:0.85rem;color:rgba(255,255,255,0.40);line-height:1.8;text-align:center; }
+  .success-sig { font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:rgba(189,176,216,0.50);text-align:center;line-height:1.7; }
+  .footer { font-size:0.68rem;color:rgba(255,255,255,0.10);text-align:center; }
+  @media(max-width:500px) { .input-row{grid-template-columns:1fr} .headline{font-size:2.2rem} }
+</style>
+</head>
+<body>
 
+<div class="bg">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+</div>
+
+<div class="page">
+  <div class="wrap">
+
+    <div class="logo-ring">
+      <img src="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" alt="SmartLila logo" />
+    </div>
+
+    <div class="eyebrow">Lista de espera · Acesso antecipado</div>
+
+    <h1 class="headline">
+      Sinta o coração dele,<br>
+      <em>onde você estiver.</em>
+    </h1>
+
+    <p class="subhead">
+      A SmartLila One monitora a saúde do seu cão em tempo real — frequência cardíaca, bem-estar, padrões de sono. Para quem trata pet como família.
+    </p>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-text">Acesso antecipado ao produto</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">✨</div>
+        <div class="benefit-text">Condições exclusivas para quem assinar o acesso antecipado</div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">💜</div>
+        <div class="benefit-text">Seja um dos primeiros a testar a coleira SmartLila</div>
+      </div>
+    </div>
+
+    <div class="form" id="form">
+      <div class="input-row">
+        <div class="input-group">
+          <label class="input-label" for="pet">Nome do seu cão (ou cães)</label>
+          <input type="text" id="pet" placeholder="Ex: Lila, Thor..." autocomplete="off" />
+        </div>
+        <div class="input-group">
+          <label class="input-label" for="name">Seu nome</label>
+          <input type="text" id="name" placeholder="Ex: Melina" autocomplete="given-name" />
+        </div>
+      </div>
+      <div class="input-group">
+        <label class="input-label" for="email">Seu e-mail</label>
+        <input type="email" id="email" placeholder="Ex: melina@email.com" autocomplete="email" />
+      </div>
+
+      <div class="lgpd">
+        <input type="checkbox" id="lgpd" />
+        <div class="lgpd-text">
+          <label for="lgpd">Concordo em receber novidades sobre o lançamento da SmartLila por e-mail. Seus dados são protegidos conforme a <a href="#" target="_blank">Política de Privacidade</a>. Você pode cancelar a qualquer momento.</label>
+        </div>
+      </div>
+
+      <button class="btn" id="btn" onclick="submitForm()">Quero ser o primeiro a saber 🐶</button>
+      <p class="form-note">Sem spam. Só novidades que valem a pena.</p>
+    </div>
+
+    <div class="success" id="success">
+      <div class="success-icon">🌸</div>
+      <div class="success-title">Você entrou, <span id="success-name"></span>!</div>
+      <p class="success-text">
+        Obrigada por confiar na nossa família.<br>
+        Você será um dos primeiros a saber quando lançarmos.
+      </p>
+      <div class="success-sig">Com amor,<br>Família da Lila 🐾</div>
+    </div>
+
+    <div class="footer">SmartLila Tecnologia Pet Ltda · Jaraguá do Sul, SC · © 2026</div>
+
+  </div>
+</div>
+
+<script>
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function submitForm() {
+  var pet   = document.getElementById('pet').value.trim();
+  var name  = document.getElementById('name').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var lgpd  = document.getElementById('lgpd').checked;
+  var btn   = document.getElementById('btn');
+
+  if (!isValidEmail(email)) {
+    document.getElementById('email').style.borderColor = 'rgba(239,68,68,0.5)';
+    document.getElementById('email').focus();
+    return;
+  }
+  document.getElementById('email').style.borderColor = '';
+
+  if (!lgpd) {
+    alert('Por favor, aceite os termos para continuar.');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Entrando... 🌸';
+
+  var params = new URLSearchParams(window.location.search);
+  var utm_source = params.get('utm_source') || 'direct';
+
+  setTimeout(function() {
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('success-name').textContent = name || 'você';
+    document.getElementById('success').classList.add('show');
+  }, 800);
+}
+
+document.getElementById('email').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') submitForm();
+});
+</script>
+
+</body>
+</html>
