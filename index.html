@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SmartLila — Lista de Espera</title>
 <meta name="description" content="Coleira inteligente para quem trata pet como família. Monitoramento preventivo de saúde canina em tempo real. Entre na lista e seja o primeiro a saber.">
-<meta property="og:title" content="SmartLila — Sinta o coração dele, onde você estiver." />
+<meta property="og:title" content="SmartLila — Cuide do seu melhor amigo. Onde você estiver." />
 <meta property="og:description" content="Coleira inteligente para monitoramento preventivo de saúde canina. Para quem trata pet como família." />
 <meta property="og:image" content="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" />
 <meta property="og:url" content="https://smartlila.com.br" />
@@ -22,12 +22,14 @@
   @keyframes heartbeat3 { 0%{transform:translate(-50%,-50%) scale(1);opacity:0.10} 12%{transform:translate(-50%,-50%) scale(1.14);opacity:0.22} 22%{transform:translate(-50%,-50%) scale(0.95);opacity:0.08} 32%{transform:translate(-50%,-50%) scale(1.20);opacity:0.28} 46%{transform:translate(-50%,-50%) scale(1);opacity:0.10} 100%{transform:translate(-50%,-50%) scale(1);opacity:0.10} }
   @keyframes icon-beat { 0%{transform:scale(1)} 8%{transform:scale(1.18)} 16%{transform:scale(0.96)} 26%{transform:scale(1.24)} 40%{transform:scale(1)} 100%{transform:scale(1)} }
   @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes pulse-ring { 0%,100%{opacity:0.10} 50%{opacity:0.25} }
+  @keyframes beat-center { 0%,100%{transform:scale(1)} 15%{transform:scale(1.05)} 30%{transform:scale(0.97)} 45%{transform:scale(1.08)} 60%{transform:scale(1)} }
   .bg-orb { position: absolute; border-radius: 50%; filter: blur(90px); }
   .bg-orb-1 { width:640px;height:640px;background:radial-gradient(circle,#7C3AED,transparent 70%);top:-200px;right:-140px;animation:heartbeat 1.65s ease-in-out infinite; }
   .bg-orb-2 { width:430px;height:430px;background:radial-gradient(circle,#3B7FD4,transparent 70%);bottom:-90px;left:-90px;animation:heartbeat2 1.65s ease-in-out infinite 0.08s; }
   .bg-orb-3 { width:330px;height:330px;background:radial-gradient(circle,#BDB0D8,transparent 70%);top:50%;left:50%;animation:heartbeat3 1.65s ease-in-out infinite 0.16s; }
   .page { position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem; }
-  .wrap { width:100%;max-width:560px;display:flex;flex-direction:column;align-items:center;gap:1.75rem;text-align:center;animation:fadeUp 0.8s ease forwards; }
+  .wrap { width:100%;max-width:580px;display:flex;flex-direction:column;align-items:center;gap:1.75rem;text-align:center;animation:fadeUp 0.8s ease forwards; }
   .logo-ring { width:88px;height:88px;border-radius:50%;border:1px solid rgba(189,176,216,0.18);display:flex;align-items:center;justify-content:center;position:relative;animation:icon-beat 1.65s ease-in-out infinite; }
   .logo-ring::before { content:'';position:absolute;inset:-8px;border-radius:50%;border:1px solid rgba(189,176,216,0.07); }
   .logo-ring img { width:72px;height:72px;object-fit:contain; }
@@ -37,8 +39,11 @@
   .subhead { font-size:0.95rem;font-weight:300;color:rgba(255,255,255,0.40);line-height:1.75;max-width:440px; }
   .benefits { width:100%;display:flex;flex-direction:column;gap:0.65rem; }
   .benefit { display:flex;align-items:center;gap:1rem;background:rgba(189,176,216,0.06);border:1px solid rgba(189,176,216,0.14);border-radius:12px;padding:0.85rem 1.25rem;text-align:left; }
-  .benefit-icon { width:34px;height:34px;border-radius:50%;background:rgba(189,176,216,0.12);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;animation:icon-beat 1.65s ease-in-out infinite; }
+  .benefit-icon { width:34px;height:34px;border-radius:50%;background:rgba(189,176,216,0.12);display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0; }
   .benefit-text { font-size:0.875rem;font-weight:500;color:rgba(255,255,255,0.85); }
+  .ring-section { width:100%;display:flex;justify-content:center;margin:0.5rem 0; }
+  .pulse { animation: pulse-ring 2s ease-in-out infinite; }
+  .beat-el { animation: beat-center 1.65s ease-in-out infinite; transform-origin: 210px 230px; }
   .form { width:100%;display:flex;flex-direction:column;gap:0.65rem; }
   .input-row { display:grid;grid-template-columns:1fr 1fr;gap:0.65rem; }
   .input-group { display:flex;flex-direction:column;gap:0.4rem;text-align:left; }
@@ -47,7 +52,7 @@
   input::placeholder { color:rgba(255,255,255,0.20); }
   input:focus { border-color:rgba(189,176,216,0.45);background:rgba(255,255,255,0.07); }
   .lgpd { display:flex;align-items:flex-start;gap:0.75rem;text-align:left;padding:0.75rem 1rem;background:rgba(189,176,216,0.04);border:1px solid rgba(189,176,216,0.12);border-radius:10px; }
-  .lgpd input[type="checkbox"] { width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:#BDB0D8;cursor:pointer;padding:0;border-radius:4px; }
+  .lgpd input[type="checkbox"] { width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:#BDB0D8;cursor:pointer;padding:0; }
   .lgpd-text { font-size:0.75rem;color:rgba(255,255,255,0.35);line-height:1.6; }
   .lgpd-text a { color:rgba(189,176,216,0.6);text-decoration:underline; }
   .btn { width:100%;background:#BDB0D8;color:#0F0520;border:none;border-radius:12px;padding:1rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:500;cursor:pointer;transition:all 0.2s; }
@@ -83,8 +88,8 @@
     <div class="eyebrow">Lista de espera · Acesso antecipado</div>
 
     <h1 class="headline">
-      Sinta o coração dele,<br>
-      <em>onde você estiver.</em>
+      Cuide do seu melhor amigo.<br>
+      <em>Onde você estiver.</em>
     </h1>
 
     <p class="subhead">
@@ -106,6 +111,92 @@
       </div>
     </div>
 
+    <!-- FEATURE RING -->
+    <div class="ring-section">
+      <svg width="320" height="350" viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg">
+        <circle class="pulse" cx="210" cy="230" r="178" fill="none" stroke="#7C3AED" stroke-width="1.5"/>
+        <circle cx="210" cy="230" r="162" fill="none" stroke="rgba(189,176,216,0.10)" stroke-width="0.8" stroke-dasharray="3 8"/>
+        <circle cx="210" cy="230" r="118" fill="none" stroke="rgba(189,176,216,0.06)" stroke-width="0.5"/>
+        <circle class="beat-el" cx="210" cy="230" r="72" fill="#160930" stroke="#BDB0D8" stroke-width="0.8" stroke-opacity="0.25"/>
+        <circle cx="210" cy="230" r="64" fill="none" stroke="rgba(189,176,216,0.07)" stroke-width="0.5"/>
+        <image href="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" x="166" y="186" width="88" height="88"/>
+        <line x1="210" y1="158" x2="210" y2="96"  stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="261" y1="179" x2="305" y2="135" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="282" y1="230" x2="344" y2="230" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="261" y1="281" x2="305" y2="325" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="210" y1="302" x2="210" y2="364" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="159" y1="281" x2="115" y2="325" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="138" y1="230" x2="76"  y2="230" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <line x1="159" y1="179" x2="115" y2="135" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
+        <!-- Cardíaco -->
+        <g transform="translate(210,68)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <path d="M-5,-6 C-5,-9 -1,-10 0,-7 C1,-10 5,-9 5,-6 C5,-3 0,2 0,2 C0,2 -5,-3 -5,-6Z" fill="#E57373"/>
+          <path d="M-12,1 L-8,1 L-6,-5 L-3,7 L0,-2 L3,1 L12,1" fill="none" stroke="rgba(189,176,216,0.9)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Cardíaco</text>
+        </g>
+        <!-- HRV -->
+        <g transform="translate(325,115)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <path d="M-12,2 L-7,2 L-5,-7 L-3,9 L-1,-3 L1,2 L4,2 L6,-4 L8,6 L10,0 L12,0" fill="none" stroke="#BDB0D8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">HRV</text>
+        </g>
+        <!-- Atividade -->
+        <g transform="translate(372,230)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <image href="https://i.postimg.cc/SXVZNQMm/icon-atividade.png" x="-20" y="-18" width="40" height="40"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Atividade</text>
+        </g>
+        <!-- Stress -->
+        <g transform="translate(325,345)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <image href="https://i.postimg.cc/Lqvy641s/icon-stress.png" x="-18" y="-19" width="36" height="36"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Stress</text>
+        </g>
+        <!-- Bateria -->
+        <g transform="translate(210,392)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <rect x="-12" y="-18" width="21" height="12" rx="2.5" fill="none" stroke="#BDB0D8" stroke-width="1.4"/>
+          <rect x="9" y="-14.5" width="4" height="5" rx="1.2" fill="#BDB0D8"/>
+          <rect x="-10" y="-16" width="16" height="8" rx="1.5" fill="#10B981"/>
+          <text x="0" y="4" text-anchor="middle" font-size="10" fill="#BDB0D8" font-family="DM Sans,sans-serif" font-weight="700">3M</text>
+          <text y="18" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Bateria</text>
+        </g>
+        <!-- IA -->
+        <g transform="translate(95,345)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <rect x="-7" y="-7" width="14" height="14" rx="2" fill="none" stroke="#BDB0D8" stroke-width="1.3"/>
+          <line x1="-7" y1="-4" x2="-11" y2="-4" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="-7" y1="0"  x2="-11" y2="0"  stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="-7" y1="4"  x2="-11" y2="4"  stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="7"  y1="-4" x2="11"  y2="-4" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="7"  y1="0"  x2="11"  y2="0"  stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="7"  y1="4"  x2="11"  y2="4"  stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <rect x="-3" y="-3" width="6" height="6" rx="1" fill="rgba(189,176,216,0.25)" stroke="rgba(189,176,216,0.5)" stroke-width="0.8"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">IA</text>
+        </g>
+        <!-- Passos -->
+        <g transform="translate(48,230)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <path d="M-9,5 C-9,0 -2,0 -2,5 C-2,9 -9,9 -9,5Z" fill="none" stroke="#BDB0D8" stroke-width="1.3"/>
+          <path d="M-11,-1 C-12,-4 -9,-5 -8,-2" fill="none" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M-7,-3 C-7,-6 -4,-6 -4,-3" fill="none" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M-3,-2 C-2,-5 1,-4 0,-1" fill="none" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M3,3 C3,-1 9,-1 9,3 C9,7 3,7 3,3Z" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1.1"/>
+          <path d="M2,-2 C1,-5 4,-5 4,-2" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
+          <path d="M6,-3 C6,-6 9,-5 8,-2" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
+          <path d="M10,-2 C11,-4 13,-3 12,-1" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Passos</text>
+        </g>
+        <!-- Sono -->
+        <g transform="translate(95,115)">
+          <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
+          <image href="https://i.postimg.cc/DW7jT48K/icon-sono.png" x="-20" y="-19" width="40" height="38"/>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Sono</text>
+        </g>
+      </svg>
+    </div>
+
     <div class="form" id="form">
       <div class="input-row">
         <div class="input-group">
@@ -114,21 +205,19 @@
         </div>
         <div class="input-group">
           <label class="input-label" for="name">Seu nome</label>
-          <input type="text" id="name" placeholder="Ex: Melina" autocomplete="given-name" />
+          <input type="text" id="name" placeholder="Ex: Maria" autocomplete="given-name" />
         </div>
       </div>
       <div class="input-group">
         <label class="input-label" for="email">Seu e-mail</label>
-        <input type="email" id="email" placeholder="Ex: melina@email.com" autocomplete="email" />
+        <input type="email" id="email" placeholder="Ex: maria@email.com" autocomplete="email" />
       </div>
-
       <div class="lgpd">
         <input type="checkbox" id="lgpd" />
         <div class="lgpd-text">
           <label for="lgpd">Concordo em receber novidades sobre o lançamento da SmartLila por e-mail. Seus dados são protegidos conforme a <a href="#" target="_blank">Política de Privacidade</a>. Você pode cancelar a qualquer momento.</label>
         </div>
       </div>
-
       <button class="btn" id="btn" onclick="submitForm()">Quero ser o primeiro a saber 🐶</button>
       <p class="form-note">Sem spam. Só novidades que valem a pena.</p>
     </div>
@@ -136,10 +225,7 @@
     <div class="success" id="success">
       <div class="success-icon">🌸</div>
       <div class="success-title">Você entrou, <span id="success-name"></span>!</div>
-      <p class="success-text">
-        Obrigada por confiar na nossa família.<br>
-        Você será um dos primeiros a saber quando lançarmos.
-      </p>
+      <p class="success-text">Obrigada por confiar na nossa família.<br>Você será um dos primeiros a saber quando lançarmos.</p>
       <div class="success-sig">Com amor,<br>Família da Lila 🐾</div>
     </div>
 
@@ -149,46 +235,24 @@
 </div>
 
 <script>
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function submitForm() {
-  var pet   = document.getElementById('pet').value.trim();
-  var name  = document.getElementById('name').value.trim();
-  var email = document.getElementById('email').value.trim();
-  var lgpd  = document.getElementById('lgpd').checked;
-  var btn   = document.getElementById('btn');
-
-  if (!isValidEmail(email)) {
-    document.getElementById('email').style.borderColor = 'rgba(239,68,68,0.5)';
-    document.getElementById('email').focus();
-    return;
-  }
-  document.getElementById('email').style.borderColor = '';
-
-  if (!lgpd) {
-    alert('Por favor, aceite os termos para continuar.');
-    return;
-  }
-
-  btn.disabled = true;
-  btn.textContent = 'Entrando... 🌸';
-
-  var params = new URLSearchParams(window.location.search);
-  var utm_source = params.get('utm_source') || 'direct';
-
-  setTimeout(function() {
-    document.getElementById('form').style.display = 'none';
-    document.getElementById('success-name').textContent = name || 'você';
+function isValidEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);}
+function submitForm(){
+  var pet=document.getElementById('pet').value.trim();
+  var name=document.getElementById('name').value.trim();
+  var email=document.getElementById('email').value.trim();
+  var lgpd=document.getElementById('lgpd').checked;
+  var btn=document.getElementById('btn');
+  if(!isValidEmail(email)){document.getElementById('email').style.borderColor='rgba(239,68,68,0.5)';document.getElementById('email').focus();return;}
+  document.getElementById('email').style.borderColor='';
+  if(!lgpd){alert('Por favor, aceite os termos para continuar.');return;}
+  btn.disabled=true;btn.textContent='Entrando... 🌸';
+  setTimeout(function(){
+    document.getElementById('form').style.display='none';
+    document.getElementById('success-name').textContent=name||'você';
     document.getElementById('success').classList.add('show');
-  }, 800);
+  },800);
 }
-
-document.getElementById('email').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') submitForm();
-});
+document.getElementById('email').addEventListener('keydown',function(e){if(e.key==='Enter')submitForm();});
 </script>
-
 </body>
 </html>
