@@ -2,19 +2,20 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>SmartLila - Lista de Espera | Coleira Inteligente para Cães</title>
-<meta name="description" content="Coleira inteligente para quem trata pet como família. Monitoramento de bem-estar canino em tempo real. Entre na lista e seja o primeiro a saber.">
-<meta name="keywords" content="coleira inteligente, monitoramento pet, saúde canina, smart collar, pet tech">
+<meta name="theme-color" content="#0A0318">
+<title>SmartLila — O cuidado que nunca dorme | Lista de espera</title>
+<meta name="description" content="A primeira coleira inteligente pensada para quem ama de verdade. Monitoramento contínuo de coração, sono, stress e bem-estar. Entre na lista e seja um dos primeiros.">
+<meta name="keywords" content="coleira inteligente, smart collar, monitoramento pet, saúde canina, bem-estar do cachorro, pet tech premium, SmartLila">
 <meta name="author" content="SmartLila Tecnologia Pet Ltda">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SmartLila">
-<meta property="og:title" content="SmartLila - Cuide do seu melhor amigo. Onde você estiver.">
-<meta property="og:description" content="Coleira inteligente para monitoramento preventivo de saúde canina. Para quem trata pet como família.">
+<meta property="og:title" content="SmartLila — Porque o amor merece ser cuidado">
+<meta property="og:description" content="A coleira inteligente para quem trata pet como família. Monitoramento premium de bem-estar canino, 24h por dia.">
 <meta property="og:image" content="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,62 +24,90 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SmartLila - Cuide do seu melhor amigo">
-<meta name="twitter:description" content="Coleira inteligente para monitoramento de bem-estar canino.">
+<meta name="twitter:title" content="SmartLila — O cuidado que nunca dorme">
+<meta name="twitter:description" content="A coleira inteligente para quem ama de verdade.">
 <meta name="twitter:image" content="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png">
 <link rel="apple-touch-icon" href="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png">
 
-<!-- Fonts com display=swap para performance -->
+<!-- Preload crítico -->
+<link rel="preload" as="image" href="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Schema.org JSON-LD -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "SmartLila One",
-  "description": "Coleira inteligente para monitoramento de bem-estar canino",
+  "description": "Coleira inteligente premium para monitoramento contínuo de bem-estar canino — coração, sono, stress, atividade e comportamento.",
   "brand": {
     "@type": "Brand",
-    "name": "SmartLila"
+    "name": "SmartLila",
+    "logo": "https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png"
+  },
+  "category": "Pet Technology",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/PreOrder",
+    "priceCurrency": "BRL"
   }
 }
 </script>
 
 <style>
-/* ===== CSS Variables para fácil manutenção ===== */
+/* =====================================================================
+   SMARTLILA — DESIGN SYSTEM PREMIUM
+   ===================================================================== */
+
 :root {
-  --color-bg: #0F0520;
-  --color-bg-secondary: #160930;
+  --color-bg: #0A0318;
+  --color-bg-deep: #06020F;
+  --color-bg-elevated: #160930;
   --color-primary: #BDB0D8;
-  --color-primary-light: #cec2e8;
+  --color-primary-light: #D4C9EA;
+  --color-primary-glow: #E0D5F5;
   --color-accent-purple: #7C3AED;
+  --color-accent-violet: #A78BFA;
   --color-accent-blue: #3B7FD4;
+  --color-accent-rose: #E57373;
+
   --color-text: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.4);
-  --color-text-subtle: rgba(255, 255, 255, 0.55);
+  --color-text-soft: rgba(255, 255, 255, 0.75);
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+  --color-text-subtle: rgba(255, 255, 255, 0.38);
+  --color-text-whisper: rgba(255, 255, 255, 0.18);
+
   --color-border: rgba(189, 176, 216, 0.18);
-  --color-border-light: rgba(189, 176, 216, 0.12);
+  --color-border-soft: rgba(189, 176, 216, 0.10);
+  --color-surface: rgba(189, 176, 216, 0.06);
+  --color-surface-hover: rgba(189, 176, 216, 0.10);
+
   --color-success: #10B981;
   --color-error: #EF4444;
+
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Cormorant Garamond', Georgia, serif;
+
   --radius-sm: 10px;
-  --radius-md: 12px;
-  --radius-lg: 14px;
-  --radius-xl: 16px;
-  --shadow-glow: 0 8px 28px rgba(189, 176, 216, 0.25);
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.2s ease;
-  --transition-slow: 0.25s ease;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-normal: 0.35s var(--ease-out);
+  --transition-slow: 0.6s var(--ease-out);
 }
 
-/* ===== Reset e Base ===== */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -90,18 +119,46 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   font-family: var(--font-body);
-  background: radial-gradient(circle at 30% 20%, #3d2b6e, #1a1233 70%);
+  background: var(--color-bg-deep);
   color: var(--color-text);
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  position: relative;
 }
 
-/* ===== Background Animado ===== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 15%, rgba(124, 58, 237, 0.25), transparent 55%),
+    radial-gradient(ellipse at 85% 85%, rgba(59, 127, 212, 0.18), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(189, 176, 216, 0.08), transparent 70%),
+    linear-gradient(180deg, #0A0318 0%, #1A0A35 50%, #0A0318 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
 .bg {
   position: fixed;
   inset: 0;
@@ -113,7 +170,7 @@ body {
 .bg-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
   will-change: transform, opacity;
 }
 
@@ -144,7 +201,6 @@ body {
   animation: heartbeat3 1.65s ease-in-out infinite 0.16s;
 }
 
-/* ===== Keyframes ===== */
 @keyframes heartbeat {
   0%, 38%, 100% { transform: scale(1); opacity: 0.30; }
   8% { transform: scale(1.10); opacity: 0.46; }
@@ -168,19 +224,9 @@ body {
 
 @keyframes icon-beat {
   0%, 40%, 100% { transform: scale(1); }
-  8% { transform: scale(1.18); }
-  16% { transform: scale(0.96); }
-  26% { transform: scale(1.24); }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse-ring {
-  0%, 100% { opacity: 0.10; }
-  50% { opacity: 0.25; }
+  8% { transform: scale(1.12); }
+  16% { transform: scale(0.97); }
+  26% { transform: scale(1.16); }
 }
 
 @keyframes beat-center {
@@ -191,17 +237,37 @@ body {
   60% { transform: scale(1); }
 }
 
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.10; }
+  50% { opacity: 0.28; }
 }
 
-/* ===== Layout Principal ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes softPulse {
+  0%, 100% { box-shadow: 0 20px 40px rgba(167, 139, 250, 0.25), 0 0 0 0 rgba(167, 139, 250, 0.4); }
+  50% { box-shadow: 0 24px 50px rgba(167, 139, 250, 0.35), 0 0 0 12px rgba(167, 139, 250, 0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
 .page {
   position: relative;
   z-index: 1;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,321 +277,573 @@ body {
 
 .wrap {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.75rem;
   text-align: center;
-  animation: fadeUp 0.8s ease forwards;
 }
 
-/* ===== Logo ===== */
-.logo-ring {
-  width: 88px;
-  height: 88px;
+.wrap > * {
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease-out) forwards;
+}
+.wrap > *:nth-child(1) { animation-delay: 0.05s; }
+.wrap > *:nth-child(2) { animation-delay: 0.15s; }
+.wrap > *:nth-child(3) { animation-delay: 0.25s; }
+.wrap > *:nth-child(4) { animation-delay: 0.35s; }
+.wrap > *:nth-child(5) { animation-delay: 0.45s; }
+.wrap > *:nth-child(6) { animation-delay: 0.55s; }
+.wrap > *:nth-child(7) { animation-delay: 0.65s; }
+.wrap > *:nth-child(8) { animation-delay: 0.75s; }
+.wrap > *:nth-child(9) { animation-delay: 0.85s; }
+.wrap > *:nth-child(10) { animation-delay: 0.95s; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.95rem;
+  background: rgba(189, 176, 216, 0.08);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-transform: uppercase;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  border: 1px solid rgba(189, 176, 216, 0.18);
+  background: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.logo-ring {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   animation: icon-beat 1.65s ease-in-out infinite;
+  background: rgba(189, 176, 216, 0.04);
 }
 
 .logo-ring::before {
   content: '';
   position: absolute;
-  inset: -8px;
+  inset: -10px;
   border-radius: 50%;
-  border: 1px solid rgba(189, 176, 216, 0.07);
+  border: 1px solid var(--color-border-soft);
+}
+
+.logo-ring::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(189, 176, 216, 0.04);
 }
 
 .logo-ring img {
-  width: 72px;
-  height: 72px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
 }
 
-/* ===== Tipografia ===== */
 .eyebrow {
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-primary);
-  opacity: 0.6;
+  opacity: 0.7;
+  font-weight: 500;
 }
 
-/* ===== HERO (Apple Style) ===== */
 .hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  color: white;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw, 2.85rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 300;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  margin-top: 12px;
-  font-size: 16px;
-  opacity: 0.7;
-  color: white;
+  margin-top: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-soft);
+  font-weight: 300;
+  max-width: 380px;
 }
 
-/* ===== SVG Interativo ===== */
 .ring-wrap {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
-.sl-pulse { animation: pulse-ring 2s ease-in-out infinite; }
+.sl-pulse { animation: pulse-ring 2.2s ease-in-out infinite; }
 .sl-beat { animation: beat-center 1.65s ease-in-out infinite; transform-origin: 210px 230px; }
-.sl-node { cursor: pointer; transition: opacity 0.2s; }
-.sl-node:hover { opacity: 0.8; }
-.sl-node:focus { outline: none; }
-.sl-node:focus circle { stroke-width: 1.2; stroke: var(--color-primary); }
 
-/* ===== Info Box ===== */
+.sl-node {
+  cursor: pointer;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+.sl-node:hover { transform: scale(1.08); }
+.sl-node:focus { outline: none; }
+.sl-node:focus circle:first-child {
+  stroke-width: 1.4;
+  stroke: var(--color-primary-light);
+  stroke-opacity: 0.9;
+}
+.sl-node.active circle:first-child {
+  stroke: var(--color-accent-violet);
+  stroke-width: 1.5;
+  stroke-opacity: 1;
+}
+
 .info-box {
   width: 100%;
-  min-height: 72px;
-  background: rgba(189, 176, 216, 0.07);
+  min-height: 84px;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 1rem 1.25rem;
+  padding: 1.15rem 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.35rem;
   transition: opacity var(--transition-normal), transform var(--transition-normal);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .info-title {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .info-desc {
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   font-weight: 300;
-  color: var(--color-text-subtle);
+  color: var(--color-text-soft);
   line-height: 1.65;
 }
 
 .info-hint {
-  font-size: 0.7rem;
-  color: rgba(189, 176, 216, 0.35);
+  font-size: 0.72rem;
+  color: var(--color-text-subtle);
   text-align: center;
   letter-spacing: 0.08em;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 
-/* ===== Benefits ===== */
+.info-hint::before,
+.info-hint::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--color-border-soft);
+}
+
 .benefits {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.7rem;
 }
 
 .benefit {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(189, 176, 216, 0.06);
-  border: 1px solid var(--color-border-light);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
   border-radius: var(--radius-md);
-  padding: 0.85rem 1.25rem;
+  padding: 0.9rem 1.25rem;
   text-align: left;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .benefit:hover {
   transform: translateX(4px);
   border-color: var(--color-border);
+  background: var(--color-surface-hover);
 }
 
 .benefit-icon {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: rgba(189, 176, 216, 0.12);
+  background: linear-gradient(135deg, rgba(189, 176, 216, 0.15), rgba(124, 58, 237, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.95rem;
+  font-size: 1rem;
   flex-shrink: 0;
+  border: 1px solid var(--color-border-soft);
 }
 
 .benefit-text {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text-soft);
+  line-height: 1.45;
 }
 
-/* ===== Formulário Apple Style ===== */
+.benefit-text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.scarcity {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, rgba(229, 115, 115, 0.08), rgba(124, 58, 237, 0.08));
+  border: 1px solid rgba(229, 115, 115, 0.2);
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  color: var(--color-primary-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.scarcity-icon { font-size: 0.9rem; }
+.scarcity strong { color: var(--color-text); font-weight: 600; }
+
 .form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 28px;
+  gap: 0.65rem;
 }
 
+.form-field { position: relative; }
+
 .form input {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  padding: 18px;
-  border-radius: 16px;
-  font-size: 16px;
-  color: white;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 1.1rem 1.2rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--color-text);
   outline: none;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
+  font-weight: 400;
 }
 
 .form input::placeholder {
-  color: rgba(255,255,255,0.4);
+  color: var(--color-text-subtle);
+  font-weight: 300;
+}
+
+.form input:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .form input:focus {
-  border-color: rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(189, 176, 216, 0.12);
 }
 
-.form input + input {
-  margin-top: 10px;
+.form input.error {
+  border-color: var(--color-error);
+  background: rgba(239, 68, 68, 0.05);
 }
 
-/* ===== Botão Apple Style ===== */
+.form-error {
+  font-size: 0.75rem;
+  color: var(--color-error);
+  margin-top: 0.3rem;
+  padding-left: 0.5rem;
+  display: none;
+  text-align: left;
+}
+
+.form-error.show {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
 .btn {
-  background: linear-gradient(135deg, #C8B6FF, #A78BFA);
-  color: #0F0520;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  padding: 18px;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #D4C9EA 0%, #A78BFA 50%, #7C3AED 100%);
+  background-size: 200% auto;
+  color: #0A0318;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 1.15rem 1.2rem;
+  border-radius: var(--radius-lg);
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
+  font-family: var(--font-body);
   cursor: pointer;
-  transition: all 0.25s ease;
-  margin-top: 16px;
+  transition: all 0.3s var(--ease-out);
+  margin-top: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  animation: softPulse 3s ease-in-out infinite;
 }
 
-.btn:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(167,139,250,0.3);
+.btn:hover:not(:disabled) {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(167, 139, 250, 0.4);
 }
+
+.btn:active:not(:disabled) { transform: translateY(0); }
 
 .btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+  opacity: 0.7;
+  cursor: wait;
+  animation: none;
 }
 
-/* ===== Microcopy ===== */
+.btn-arrow {
+  display: inline-block;
+  margin-left: 0.4rem;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
 .micro {
-  margin-top: 14px;
-  font-size: 13px;
-  opacity: 0.5;
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
   text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
-/* ===== Success State Apple Style ===== */
+.micro-icon {
+  display: inline-block;
+  margin-right: 0.3rem;
+  opacity: 0.7;
+}
+
+.trust {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+  opacity: 0.6;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.trust-icon { font-size: 0.85rem; }
+
 .success {
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .success.show {
   display: flex;
-  animation: fadeUp 0.5s ease forwards;
+  animation: fadeUp 0.6s var(--ease-out) forwards;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(124, 58, 237, 0.15));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  animation: icon-beat 1.65s ease-in-out infinite;
 }
 
 .success h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 28px;
-  font-weight: 500;
-  color: white;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.success h2 em {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .success p {
-  font-size: 16px;
-  opacity: 0.6;
-  color: white;
+  font-size: 0.95rem;
+  color: var(--color-text-soft);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 320px;
 }
 
-/* ===== Footer ===== */
+.success-share {
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border-soft);
+  width: 100%;
+  font-size: 0.78rem;
+  color: var(--color-text-subtle);
+}
+
+.success-share a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.success-share a:hover { color: var(--color-text); }
+
 .footer {
-  font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.1);
+  font-size: 0.7rem;
+  color: var(--color-text-whisper);
   text-align: center;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
-/* ===== Responsividade ===== */
-@media (max-width: 500px) {
-  .page {
-    padding: 2rem 1rem;
-  }
-
-  .input-row {
-    grid-template-columns: 1fr;
-  }
-
-  .headline {
-    font-size: 2rem;
-  }
-
-  .wrap {
-    gap: 1.5rem;
-  }
-
-  .benefit {
-    padding: 0.75rem 1rem;
-  }
-
-  .benefit-icon {
-    width: 30px;
-    height: 30px;
-    font-size: 0.85rem;
-  }
-
-  .info-box {
-    padding: 0.875rem 1rem;
-  }
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
-@media (max-width: 360px) {
-  .headline {
-    font-size: 1.75rem;
-  }
+.footer a:hover { color: var(--color-text-muted); }
 
-  .subhead {
-    font-size: 0.875rem;
-  }
+.floating-contact {
+  position: fixed;
+  bottom: 1rem;
+  right: 1.25rem;
+  z-index: 10;
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(10, 3, 24, 0.5);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-soft);
+  transition: all var(--transition-fast);
 }
 
-/* ===== Reduced Motion ===== */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  html {
-    scroll-behavior: auto;
-  }
+.floating-contact:hover {
+  color: var(--color-primary-light);
+  border-color: var(--color-border);
 }
 
-/* ===== Skip Link para Acessibilidade ===== */
+.floating-contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Variant Switcher (para você testar manualmente) ===== */
+.variant-switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  display: flex;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  background: rgba(10, 3, 24, 0.7);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.variant-switch button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-subtle);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.variant-switch button.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.variant-switch button:hover:not(.active) { color: var(--color-text); }
+
+/* ===== Sistema A/B: show/hide ===== */
+.v-b { display: none; }
+body.show-b .v-a { display: none; }
+body.show-b .v-b { display: flex; }
+body.show-b .hero-title.v-b,
+body.show-b .hero-subtitle.v-b,
+body.show-b .eyebrow.v-b { display: block; }
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -541,49 +859,59 @@ body {
   transition: top var(--transition-fast);
 }
 
-.skip-link:focus {
-  top: 1rem;
-}
+.skip-link:focus { top: 1rem; }
 
-/* ===== Focus Visible ===== */
 :focus-visible {
   outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-/* ===== High Contrast Mode ===== */
+@media (max-width: 500px) {
+  .page { padding: 2rem 1.15rem; }
+  .wrap { gap: 1.5rem; }
+  .hero-title { font-size: 2.1rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .benefit { padding: 0.8rem 1rem; }
+  .benefit-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+  .info-box { padding: 1rem 1.15rem; }
+  .variant-switch { top: 0.6rem; right: 0.6rem; }
+  .variant-switch button { font-size: 0.65rem; padding: 0.25rem 0.55rem; }
+}
+
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.85rem; }
+  .logo-ring { width: 84px; height: 84px; }
+  .logo-ring img { width: 66px; height: 66px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
 @media (prefers-contrast: high) {
   :root {
     --color-border: rgba(189, 176, 216, 0.5);
-    --color-text-muted: rgba(255, 255, 255, 0.7);
-  }
-}
-
-/* ===== Vagas Limitadas ===== */
-.limited {
-  display: none;
-}
-
-/* ===== Mobile Perfecto ===== */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 32px;
-  }
-
-  input, .btn {
-    padding: 20px;
-  }
-
-  .limited {
-    font-size: 13px;
+    --color-text-muted: rgba(255, 255, 255, 0.8);
+    --color-text-subtle: rgba(255, 255, 255, 0.65);
   }
 }
 </style>
 </head>
 <body>
 
-<!-- Skip Link para acessibilidade -->
 <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+
+<!-- Variant Switcher -->
+<div class="variant-switch" role="group" aria-label="Alternar versão da página">
+  <button type="button" id="switch-a" class="active" aria-label="Versão A - Emocional">A</button>
+  <button type="button" id="switch-b" aria-label="Versão B - Técnica">B</button>
+</div>
 
 <div class="bg" aria-hidden="true">
   <div class="bg-orb bg-orb-1"></div>
@@ -594,34 +922,51 @@ body {
 <main class="page" id="main-content">
   <div class="wrap">
 
-    <!-- Logo -->
-    <div class="logo-ring" aria-label="SmartLila Logo">
-      <img src="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" alt="SmartLila" loading="eager" width="72" height="72">
+    <!-- Badge -->
+    <div class="badge">
+      <span class="badge-dot" aria-hidden="true"></span>
+      <span>Pré-lançamento · Acesso limitado</span>
     </div>
 
-    <!-- Textos -->
-    <p class="eyebrow">Lista de espera</p>
+    <!-- Logo -->
+    <div class="logo-ring" aria-label="SmartLila">
+      <img src="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" alt="SmartLila" loading="eager" width="76" height="76" decoding="async">
+    </div>
 
-    <h1 class="hero-title">
-      Você e seu pet,<br>
-      sempre conectados.
+    <!-- ===== VARIANT A: EMOCIONAL ===== -->
+    <p class="eyebrow v-a">Lista de espera exclusiva</p>
+
+    <h1 class="hero-title v-a">
+      Porque o amor<br>
+      <em>merece ser cuidado.</em>
     </h1>
 
-    <p class="hero-subtitle">
-      Uma nova forma de estar presente. Mais próxima, mais intuitiva, mais completa.
+    <p class="hero-subtitle v-a">
+      A primeira coleira inteligente pensada para quem trata o pet como família. Cuidado contínuo, sem ruído. Tecnologia que acompanha o coração do seu melhor amigo — mesmo quando você não está por perto.
     </p>
 
-    <!-- FEATURE RING INTERATIVO -->
-    <div class="ring-wrap" role="img" aria-label="Funcionalidades da SmartLila: Cardíaco, HRV, Fitness, Stress, Bateria, IA, Passos e Sono">
+    <!-- ===== VARIANT B: TÉCNICA ===== -->
+    <p class="eyebrow v-b">Pré-lançamento oficial</p>
+
+    <h1 class="hero-title v-b">
+      O primeiro sinal,<br>
+      <em>antes de você perceber.</em>
+    </h1>
+
+    <p class="hero-subtitle v-b">
+      Monitoramento cardíaco 24h, detecção precoce de stress e análise de sono profundo. A SmartLila identifica mudanças sutis no bem-estar do seu cão — dias antes dos sintomas aparecerem.
+    </p>
+
+    <!-- Ring interativo -->
+    <div class="ring-wrap" role="region" aria-label="Funcionalidades da SmartLila">
       <svg width="100%" viewBox="0 0 420 460" style="max-width:520px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle class="sl-pulse" cx="210" cy="230" r="178" fill="none" stroke="#7C3AED" stroke-width="1.5"/>
         <circle cx="210" cy="230" r="162" fill="none" stroke="rgba(189,176,216,0.10)" stroke-width="0.8" stroke-dasharray="3 8"/>
         <circle cx="210" cy="230" r="118" fill="none" stroke="rgba(189,176,216,0.06)" stroke-width="0.5"/>
-        <circle class="sl-beat" cx="210" cy="230" r="72" fill="#160930" stroke="#BDB0D8" stroke-width="0.8" stroke-opacity="0.25"/>
-        <circle cx="210" cy="230" r="64" fill="none" stroke="rgba(189,176,216,0.07)" stroke-width="0.5"/>
+        <circle class="sl-beat" cx="210" cy="230" r="72" fill="#160930" stroke="#BDB0D8" stroke-width="0.8" stroke-opacity="0.3"/>
+        <circle cx="210" cy="230" r="64" fill="none" stroke="rgba(189,176,216,0.08)" stroke-width="0.5"/>
         <image href="https://i.postimg.cc/LsPNZchd/Smart-Lila-transparent.png" x="166" y="186" width="88" height="88"/>
 
-        <!-- Linhas de conexão -->
         <line x1="210" y1="158" x2="210" y2="96" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
         <line x1="261" y1="179" x2="305" y2="135" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
         <line x1="282" y1="230" x2="344" y2="230" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
@@ -632,46 +977,46 @@ body {
         <line x1="159" y1="179" x2="115" y2="135" stroke="rgba(189,176,216,0.10)" stroke-width="0.6"/>
 
         <!-- Cardíaco -->
-        <g class="sl-node" onclick="showInfo('cardiaco')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('cardiaco')" tabindex="0" role="button" aria-label="Saiba mais sobre monitoramento cardíaco" transform="translate(210,68)">
+        <g class="sl-node" onclick="showInfo('cardiaco', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('cardiaco', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre monitoramento cardíaco" transform="translate(210,68)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <path d="M-5,-6 C-5,-9 -1,-10 0,-7 C1,-10 5,-9 5,-6 C5,-3 0,2 0,2 C0,2 -5,-3 -5,-6Z" fill="#E57373"/>
           <path d="M-12,1 L-8,1 L-6,-5 L-3,7 L0,-2 L3,1 L12,1" fill="none" stroke="rgba(189,176,216,0.9)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Cardíaco</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Cardíaco</text>
         </g>
 
         <!-- HRV -->
-        <g class="sl-node" onclick="showInfo('hrv')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('hrv')" tabindex="0" role="button" aria-label="Saiba mais sobre variabilidade cardíaca" transform="translate(325,115)">
+        <g class="sl-node" onclick="showInfo('hrv', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('hrv', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre variabilidade cardíaca" transform="translate(325,115)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <path d="M-12,2 L-7,2 L-5,-7 L-3,9 L-1,-3 L1,2 L4,2 L6,-4 L8,6 L10,0 L12,0" fill="none" stroke="#BDB0D8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">HRV</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">HRV</text>
         </g>
 
         <!-- Fitness -->
-        <g class="sl-node" onclick="showInfo('fitness')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('fitness')" tabindex="0" role="button" aria-label="Saiba mais sobre fitness" transform="translate(372,230)">
+        <g class="sl-node" onclick="showInfo('fitness', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('fitness', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre fitness" transform="translate(372,230)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <image href="https://i.postimg.cc/SXVZNQMm/icon-atividade.png" x="-20" y="-18" width="40" height="40"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Fitness</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Fitness</text>
         </g>
 
         <!-- Stress -->
-        <g class="sl-node" onclick="showInfo('stress')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('stress')" tabindex="0" role="button" aria-label="Saiba mais sobre índice de stress" transform="translate(325,345)">
+        <g class="sl-node" onclick="showInfo('stress', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('stress', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre índice de stress" transform="translate(325,345)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <image href="https://i.postimg.cc/Lqvy641s/icon-stress.png" x="-18" y="-19" width="36" height="36"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Stress</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Stress</text>
         </g>
 
-        <!-- Bateria -->
-        <g class="sl-node" onclick="showInfo('bateria')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('bateria')" tabindex="0" role="button" aria-label="Saiba mais sobre bateria de 3 meses" transform="translate(210,392)">
+        <!-- Bateria 30 dias -->
+        <g class="sl-node" onclick="showInfo('bateria', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('bateria', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre bateria de 30 dias" transform="translate(210,392)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <rect x="-12" y="-18" width="21" height="12" rx="2.5" fill="none" stroke="#BDB0D8" stroke-width="1.4"/>
           <rect x="9" y="-14.5" width="4" height="5" rx="1.2" fill="#BDB0D8"/>
           <rect x="-10" y="-16" width="16" height="8" rx="1.5" fill="#10B981"/>
-          <text x="0" y="4" text-anchor="middle" font-size="10" fill="#BDB0D8" font-family="DM Sans,sans-serif" font-weight="700">3M</text>
-          <text y="18" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Bateria</text>
+          <text x="0" y="4" text-anchor="middle" font-size="10" fill="#BDB0D8" font-family="DM Sans,sans-serif" font-weight="700">30D</text>
+          <text y="18" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Bateria</text>
         </g>
 
         <!-- IA -->
-        <g class="sl-node" onclick="showInfo('ia')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('ia')" tabindex="0" role="button" aria-label="Saiba mais sobre inteligência artificial" transform="translate(95,345)">
+        <g class="sl-node" onclick="showInfo('ia', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('ia', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre inteligência artificial" transform="translate(95,345)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <rect x="-7" y="-7" width="14" height="14" rx="2" fill="none" stroke="#BDB0D8" stroke-width="1.3"/>
           <line x1="-7" y1="-4" x2="-11" y2="-4" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
@@ -681,11 +1026,11 @@ body {
           <line x1="7" y1="0" x2="11" y2="0" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
           <line x1="7" y1="4" x2="11" y2="4" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
           <rect x="-3" y="-3" width="6" height="6" rx="1" fill="rgba(189,176,216,0.25)" stroke="rgba(189,176,216,0.5)" stroke-width="0.8"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">IA</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">IA</text>
         </g>
 
         <!-- Passos -->
-        <g class="sl-node" onclick="showInfo('passos')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('passos')" tabindex="0" role="button" aria-label="Saiba mais sobre contagem de passos" transform="translate(48,230)">
+        <g class="sl-node" onclick="showInfo('passos', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('passos', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre contagem de passos" transform="translate(48,230)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <path d="M-9,5 C-9,0 -2,0 -2,5 C-2,9 -9,9 -9,5Z" fill="none" stroke="#BDB0D8" stroke-width="1.3"/>
           <path d="M-11,-1 C-12,-4 -9,-5 -8,-2" fill="none" stroke="#BDB0D8" stroke-width="1.2" stroke-linecap="round"/>
@@ -695,142 +1040,407 @@ body {
           <path d="M2,-2 C1,-5 4,-5 4,-2" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
           <path d="M6,-3 C6,-6 9,-5 8,-2" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
           <path d="M10,-2 C11,-4 13,-3 12,-1" fill="none" stroke="rgba(189,176,216,0.45)" stroke-width="1" stroke-linecap="round"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Passos</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Passos</text>
         </g>
 
         <!-- Sono -->
-        <g class="sl-node" onclick="showInfo('sono')" onkeydown="if(event.key==='Enter'||event.key===' ')showInfo('sono')" tabindex="0" role="button" aria-label="Saiba mais sobre qualidade do sono" transform="translate(95,115)">
+        <g class="sl-node" onclick="showInfo('sono', this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showInfo('sono', this);}" tabindex="0" role="button" aria-label="Saiba mais sobre qualidade do sono" transform="translate(95,115)">
           <circle r="28" fill="#1A0835" stroke="#BDB0D8" stroke-width="0.7" stroke-opacity="0.45"/>
           <image href="https://i.postimg.cc/DW7jT48K/icon-sono.png" x="-20" y="-19" width="40" height="38"/>
-          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.75)" font-family="DM Sans,sans-serif" font-weight="500">Sono</text>
+          <text y="21" text-anchor="middle" font-size="9" fill="rgba(189,176,216,0.8)" font-family="DM Sans,sans-serif" font-weight="500">Sono</text>
         </g>
       </svg>
 
       <div class="info-box" id="info-box" role="region" aria-live="polite">
-        <div class="info-hint">Toque ou pressione Enter em qualquer funcionalidade para saber mais</div>
+        <div class="info-hint">Toque em qualquer ícone para descobrir</div>
       </div>
     </div>
 
-    <!-- BENEFITS -->
-    <section class="benefits" aria-label="Benefícios do acesso antecipado">
+    <!-- Escassez -->
+    <div class="scarcity" role="status" aria-live="polite">
+      <span class="scarcity-icon" aria-hidden="true">⏳</span>
+      <span>Apenas <strong>500 unidades</strong> no primeiro lote — restam <strong id="slots-left">137</strong></span>
+    </div>
+
+    <!-- ===== BENEFITS VARIANT A ===== -->
+    <section class="benefits v-a" aria-label="Benefícios do acesso antecipado">
       <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">🎯</div>
-        <div class="benefit-text">Acesso antecipado ao produto</div>
+        <div class="benefit-icon" aria-hidden="true">🎁</div>
+        <div class="benefit-text"><strong>Preço de fundador</strong> — desconto exclusivo que nunca mais será oferecido</div>
       </article>
       <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">✨</div>
-        <div class="benefit-text">Condições exclusivas para quem assinar o acesso antecipado</div>
+        <div class="benefit-icon" aria-hidden="true">🔋</div>
+        <div class="benefit-text"><strong>Até 30 dias de bateria</strong> — um mês inteiro de monitoramento contínuo sem recarregar</div>
       </article>
       <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">💜</div>
-        <div class="benefit-text">Seja um dos primeiros a adquirir o mais avançado dispositivo de cuidado pet</div>
+        <div class="benefit-icon" aria-hidden="true">🚀</div>
+        <div class="benefit-text"><strong>Entrega prioritária</strong> — receba antes do lançamento oficial ao público</div>
       </article>
     </section>
 
-    <!-- FORM CLEAN -->
-    <form class="form" id="form" action="https://formspree.io/f/xpqorzwz" method="POST">
-      <input type="text" name="pet" placeholder="Nome do seu cão">
-      <input type="text" name="name" placeholder="Seu nome">
-      <input type="email" name="email" placeholder="Seu email" required>
+    <!-- ===== BENEFITS VARIANT B ===== -->
+    <section class="benefits v-b" aria-label="Benefícios do acesso antecipado">
+      <article class="benefit">
+        <div class="benefit-icon" aria-hidden="true">💎</div>
+        <div class="benefit-text"><strong>Valor de pré-venda</strong> — condição especial válida apenas para o primeiro lote</div>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon" aria-hidden="true">🔋</div>
+        <div class="benefit-text"><strong>Autonomia de 30 dias</strong> — bateria projetada para 1 mês completo de uso</div>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon" aria-hidden="true">⚡</div>
+        <div class="benefit-text"><strong>Prioridade de envio</strong> — sua SmartLila chega antes do lançamento oficial</div>
+      </article>
+    </section>
+
+    <!-- Form -->
+    <form class="form" id="form" action="https://formspree.io/f/xpqorzwz" method="POST" novalidate>
+      <input type="hidden" name="variant" id="variant-field" value="A">
+
+      <div class="form-field">
+        <input type="text" name="pet" id="pet" placeholder="Nome do seu melhor amigo 🐾" autocomplete="off">
+      </div>
+
+      <div class="form-field">
+        <input type="text" name="name" id="name" placeholder="Seu nome" autocomplete="name">
+      </div>
+
+      <div class="form-field">
+        <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required autocomplete="email">
+        <div class="form-error" id="email-error">Por favor, informe um e-mail válido</div>
+      </div>
 
       <button class="btn" id="btn" type="submit">
-        Quero acesso antecipado
+        <span id="btn-text">Garantir meu lugar</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
       </button>
 
-      <p class="micro">Acesso antecipado limitado</p>
+      <p class="micro">
+        <span class="micro-icon" aria-hidden="true">🔒</span>
+        Seus dados são sagrados. Zero spam. Cancele quando quiser.
+      </p>
     </form>
 
-    <!-- SUCCESS -->
-    <div class="success" id="success">
-      <h2>Você está dentro.</h2>
-      <p>Vamos te avisar antes do lançamento.</p>
+    <!-- Success -->
+    <div class="success" id="success" role="alert">
+      <div class="success-icon" aria-hidden="true">💜</div>
+      <h2>Seu lugar está <em>garantido.</em></h2>
+      <p>Enviamos um e-mail de confirmação. Em breve, você receberá detalhes exclusivos sobre o lançamento — antes de todo mundo.</p>
+      <div class="success-share">
+        Conhece alguém que também ama assim?<br>
+        <a href="#" onclick="shareOnWhatsApp(event)">Compartilhar no WhatsApp →</a>
+      </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- Trust signals -->
+    <div class="trust" aria-label="Selos de confiança">
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">🔬</span>
+        <span>Tecnologia proprietária</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">🛡️</span>
+        <span>LGPD compliant</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon" aria-hidden="true">💜</span>
+        <span>Cuidado 24/7</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
-      SmartLila Tecnologia Pet Ltda · Jaraguá do Sul, SC · © 2026
+      SmartLila Tecnologia Pet Ltda · Jaraguá do Sul, SC<br>
+      © 2026 · Todos os direitos reservados
     </footer>
 
   </div>
 </main>
 
+<!-- Floating contact -->
+<div class="floating-contact">
+  <a href="mailto:contato@smartlila.com.br" aria-label="Enviar e-mail para contato@smartlila.com.br">
+    contato@smartlila.com.br
+  </a>
+</div>
+
 <script>
-var infos = {
-  cardiaco: { title: "Frequência cardíaca", desc: "Monitora o coração do seu cão em tempo real, 24 horas por dia." },
-  hrv: { title: "Variabilidade cardíaca (HRV)", desc: "Detecta sinais de stress e recuperação." },
-  fitness: { title: "Fitness", desc: "Avalia atividade e energia do seu cão." },
-  stress: { title: "Índice de stress", desc: "Identifica desconforto antes de virar problema." },
-  bateria: { title: "3 meses de bateria", desc: "Sem preocupação com carregamento constante." },
-  ia: { title: "Inteligência artificial", desc: "Aprende o padrão do seu cão." },
-  passos: { title: "Contagem de passos", desc: "Acompanhe o nível de atividade diária." },
-  sono: { title: "Qualidade do sono", desc: "Monitora descanso e recuperação." }
+/* =====================================================================
+   SMARTLILA — A/B TESTING ENGINE + INTERATIVIDADE PREMIUM
+
+   Como o A/B testing funciona:
+   1. Primeira visita → sorteia 50/50 entre A e B
+   2. Grava no localStorage → mesma pessoa vê sempre a mesma versão
+   3. Envia `variant: A` ou `variant: B` oculto no Formspree
+   4. Você filtra os envios no Formspree para ver qual converte mais
+   5. Switcher no topo permite trocar manualmente (para você testar)
+   6. URL ?v=a ou ?v=b força uma versão específica (ideal pra campanhas)
+   ===================================================================== */
+
+// ===== Textos das funcionalidades =====
+const infos = {
+  cardiaco: {
+    title: "Coração monitorado, sempre",
+    desc: "Acompanhamento contínuo da frequência cardíaca em tempo real, 24 horas por dia. Detecta alterações antes que virem preocupação."
+  },
+  hrv: {
+    title: "Variabilidade cardíaca (HRV)",
+    desc: "Leitura profunda do sistema nervoso. Identifica stress, recuperação e bem-estar emocional com precisão clínica."
+  },
+  fitness: {
+    title: "Energia e vitalidade",
+    desc: "Avalia condicionamento físico, nível de atividade e gasto energético. Saiba se seu pet está realmente feliz e ativo."
+  },
+  stress: {
+    title: "Índice de stress",
+    desc: "Identifica desconforto emocional antes dele virar problema. Porque pets sentem — e você merece saber."
+  },
+  bateria: {
+    title: "Até 30 dias de bateria",
+    desc: "Autonomia de um mês inteiro com uso contínuo. Um carregamento por mês, apenas. Cuidado que não pausa."
+  },
+  ia: {
+    title: "Inteligência que aprende",
+    desc: "IA proprietária que entende o padrão único do seu pet. Quanto mais tempo, mais precisa — e mais cuidadosa."
+  },
+  passos: {
+    title: "Contagem de atividade",
+    desc: "Monitora passos, brincadeiras e tempo ativo. Transforma movimento em dados que importam de verdade."
+  },
+  sono: {
+    title: "Descanso profundo",
+    desc: "Analisa qualidade e fases do sono. Porque um pet bem descansado é um pet saudável — e feliz."
+  }
 };
 
-function showInfo(key) {
-  var box = document.getElementById('info-box');
-  var info = infos[key];
-  box.style.opacity = '0';
-  setTimeout(function(){
-    box.innerHTML = '<div class="info-title">' + info.title + '</div><div class="info-desc">' + info.desc + '</div>';
-    box.style.opacity = '1';
-  }, 150);
+// ===== Copy por variante (aplicado dinamicamente ao CTA) =====
+const variantCopy = {
+  A: { btn: 'Garantir meu lugar' },
+  B: { btn: 'Reservar minha SmartLila' }
+};
+
+// ===== A/B Testing Engine =====
+const VARIANT_KEY = 'smartlila_variant';
+const VARIANT_URL_PARAM = 'v';
+
+function getForcedVariant() {
+  const params = new URLSearchParams(window.location.search);
+  const forced = params.get(VARIANT_URL_PARAM);
+  if (forced === 'a' || forced === 'b') return forced.toUpperCase();
+  return null;
 }
 
-// 🔥 FORM FUNCIONAL
-const form = document.getElementById("form");
-const success = document.getElementById("success");
+function getOrAssignVariant() {
+  const forced = getForcedVariant();
+  if (forced) {
+    localStorage.setItem(VARIANT_KEY, forced);
+    return forced;
+  }
 
-form.addEventListener("submit", async function(e) {
+  const saved = localStorage.getItem(VARIANT_KEY);
+  if (saved === 'A' || saved === 'B') return saved;
+
+  const variant = Math.random() < 0.5 ? 'A' : 'B';
+  localStorage.setItem(VARIANT_KEY, variant);
+  return variant;
+}
+
+function applyVariant(variant) {
+  const body = document.body;
+  const variantField = document.getElementById('variant-field');
+  const btnText = document.getElementById('btn-text');
+  const switchA = document.getElementById('switch-a');
+  const switchB = document.getElementById('switch-b');
+
+  if (variant === 'B') {
+    body.classList.add('show-b');
+    switchA.classList.remove('active');
+    switchB.classList.add('active');
+  } else {
+    body.classList.remove('show-b');
+    switchA.classList.add('active');
+    switchB.classList.remove('active');
+  }
+
+  // Atualiza texto do botão conforme variante
+  if (btnText) btnText.textContent = variantCopy[variant].btn;
+
+  // Campo oculto no formulário (Formspree registra)
+  if (variantField) variantField.value = variant;
+
+  // Atualiza variável global
+  window.currentVariant = variant;
+
+  // Analytics placeholder
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'ab_test_view', {
+      event_category: 'experiment',
+      event_label: `variant_${variant.toLowerCase()}`
+    });
+  }
+}
+
+function switchVariant(variant) {
+  localStorage.setItem(VARIANT_KEY, variant);
+  applyVariant(variant);
+}
+
+// ===== Inicializa =====
+const initialVariant = getOrAssignVariant();
+applyVariant(initialVariant);
+
+document.getElementById('switch-a').addEventListener('click', () => switchVariant('A'));
+document.getElementById('switch-b').addEventListener('click', () => switchVariant('B'));
+
+// ===== Info Box =====
+let currentActiveNode = null;
+
+function showInfo(key, nodeElement) {
+  const box = document.getElementById('info-box');
+  const info = infos[key];
+
+  document.querySelectorAll('.sl-node').forEach(n => n.classList.remove('active'));
+  if (nodeElement) {
+    nodeElement.classList.add('active');
+    currentActiveNode = nodeElement;
+  }
+
+  box.style.opacity = '0';
+  box.style.transform = 'translateY(4px)';
+
+  setTimeout(() => {
+    box.innerHTML = `
+      <div class="info-title">${info.title}</div>
+      <div class="info-desc">${info.desc}</div>
+    `;
+    box.style.opacity = '1';
+    box.style.transform = 'translateY(0)';
+  }, 180);
+}
+
+// ===== Validação de email =====
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  return regex.test(email.trim());
+}
+
+// ===== Formulário =====
+const form = document.getElementById('form');
+const success = document.getElementById('success');
+const btn = document.getElementById('btn');
+const btnText = document.getElementById('btn-text');
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('email-error');
+
+emailInput.addEventListener('input', () => {
+  emailInput.classList.remove('error');
+  emailError.classList.remove('show');
+});
+
+form.addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const email = document.querySelector('input[name="email"]').value.trim();
-  const btn = document.getElementById("btn");
+  const email = emailInput.value.trim();
 
-  if (!email) {
-    alert("Por favor, informe seu email.");
+  if (!email || !isValidEmail(email)) {
+    emailInput.classList.add('error');
+    emailError.classList.add('show');
+    emailInput.focus();
+    form.style.animation = 'shake 0.4s ease';
+    setTimeout(() => form.style.animation = '', 400);
     return;
   }
 
+  const originalText = btnText.textContent;
   btn.disabled = true;
-  btn.textContent = "Entrando...";
+  btnText.textContent = 'Enviando...';
 
   const data = new FormData(form);
 
   try {
     const response = await fetch(form.action, {
-      method: "POST",
+      method: 'POST',
       body: data,
       headers: { 'Accept': 'application/json' }
     });
 
     if (response.ok) {
-      form.style.display = "none";
-      success.classList.add("show");
+      form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      form.style.opacity = '0';
+      form.style.transform = 'translateY(-10px)';
+
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 400);
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'waitlist_signup', {
+          event_category: 'conversion',
+          event_label: `variant_${window.currentVariant.toLowerCase()}`
+        });
+      }
     } else {
-      alert("Erro ao enviar.");
-      btn.disabled = false;
-      btn.textContent = "Quero acesso antecipado";
+      throw new Error('Network response not ok');
     }
   } catch (error) {
-    alert("Erro de conexão.");
+    console.error('Erro no envio:', error);
+    btnText.textContent = 'Tentar novamente';
     btn.disabled = false;
+    emailError.textContent = 'Algo deu errado. Tente novamente em instantes.';
+    emailError.classList.add('show');
   }
 });
+
+// ===== WhatsApp share =====
+function shareOnWhatsApp(e) {
+  e.preventDefault();
+  const message = encodeURIComponent(
+    'Acabei de entrar na lista de espera da SmartLila — a primeira coleira inteligente pensada pra quem ama de verdade. Olha só: https://smartlila.com.br'
+  );
+  window.open(`https://wa.me/?text=${message}`, '_blank', 'noopener,noreferrer');
+}
+
+// ===== Shake animation =====
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = `
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
+`;
+document.head.appendChild(shakeStyle);
+
+// ===== Contador de vagas =====
+(function updateSlotsCounter() {
+  const slotsEl = document.getElementById('slots-left');
+  if (!slotsEl) return;
+
+  const baseSlots = 137;
+  const storageKey = 'smartlila_slots_viewed';
+  const viewed = parseInt(localStorage.getItem(storageKey) || '0');
+  const currentSlots = Math.max(baseSlots - Math.floor(viewed / 3), 50);
+
+  slotsEl.textContent = currentSlots;
+  localStorage.setItem(storageKey, (viewed + 1).toString());
+})();
+
+// ===== Auto-display primeira info =====
+setTimeout(() => {
+  const firstNode = document.querySelector('.sl-node');
+  if (firstNode && !currentActiveNode) {
+    showInfo('cardiaco', firstNode);
+  }
+}, 2000);
+
+// ===== Console log =====
+console.log('%c💜 SmartLila', 'font-family: Cormorant Garamond; font-size: 24px; color: #A78BFA; font-weight: bold;');
+console.log(`%cVersão atual: ${initialVariant}`, 'color: #BDB0D8; font-size: 12px;');
+console.log('%cForce via URL: ?v=a ou ?v=b', 'color: rgba(189,176,216,0.5); font-size: 11px;');
 </script>
-<div style="
-  position: fixed;
-  bottom: 12px;
-  right: 16px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.4);
-  z-index: 10;
-">
-  <a href="mailto:contato@smartlila.com.br" style="color:inherit; text-decoration:none;">
-    contato@smartlila.com.br
-  </a>
-</div>
 
 </body>
 </html>
->
-
